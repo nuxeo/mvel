@@ -180,7 +180,7 @@ public class CompileException extends RuntimeException {
         if (firstCr > matchIndex) {
           cs = cs.substring(0, firstCr);
         }
-        else if (firstCr < matchIndex) {
+        else {
           cs = cs.substring(firstCr + 1, cs.length());
         }
       }
