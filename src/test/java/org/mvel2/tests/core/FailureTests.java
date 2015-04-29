@@ -168,6 +168,11 @@ public class FailureTests extends AbstractTest {
     }
   }
 
+  public void testCompileExceptionWithCursorZeroAndSingleNewLineAtStart() {
+        CompileException ce = new CompileException("test error","\na=0;error;".toCharArray(),0);
+        ce.toString();
+  }
+
   public void testShouldFail11() {
     try {
       MVEL.eval("for (int i = 0; i--; i++) {}");
